@@ -16,6 +16,7 @@
 		9E53FBD92B29FDE60048E9D1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E53FBD82B29FDE60048E9D1 /* ColorExtension.swift */; };
 		9EBC7D972B2C65910010BA61 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7D962B2C65910010BA61 /* CustomButtonView.swift */; };
 		9EBC7D992B2C6E720010BA61 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7D982B2C6E720010BA61 /* GradientButtonStyle.swift */; };
+		9EBC7D9B2B2C88620010BA61 /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7D9A2B2C88620010BA61 /* CustomCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		9E53FBD82B29FDE60048E9D1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		9EBC7D962B2C65910010BA61 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		9EBC7D982B2C6E720010BA61 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
+		9EBC7D9A2B2C88620010BA61 /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				9E53FBD22B29F9390048E9D1 /* CardView.swift */,
 				9E53FBD52B29FA510048E9D1 /* CustomBackgroundView.swift */,
 				9EBC7D962B2C65910010BA61 /* CustomButtonView.swift */,
+				9EBC7D9A2B2C88620010BA61 /* CustomCircleView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E53FBC72B29F74E0048E9D1 /* ContentView.swift in Sources */,
+				9EBC7D9B2B2C88620010BA61 /* CustomCircleView.swift in Sources */,
 				9E53FBD32B29F9390048E9D1 /* CardView.swift in Sources */,
 				9E53FBC52B29F74E0048E9D1 /* HikeApp.swift in Sources */,
 				9EBC7D972B2C65910010BA61 /* CustomButtonView.swift in Sources */,
