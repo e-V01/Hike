@@ -25,7 +25,13 @@ struct MotionAnimationView: View {
         return CGFloat(Double.random(in: 0.1...2.0))
     }
     // 4. random speed
+    func randomSpeed() -> Double {
+        return Double.random(in: 0.05...1)
+    }
     // 5. random delay
+    func randomDelay() -> Double {
+        return Double.random(in: 0...2)
+    }
     var body: some View {
         ZStack {
             ForEach(0...randomCircle, id: \.self) { item in
@@ -40,6 +46,8 @@ struct MotionAnimationView: View {
                     .onAppear(perform: {
                         withAnimation(.interpolatingSpring(stiffness: 0.25, damping: 0.25)
                             .repeatForever()
+                            .speed(randomSpeed())
+                            .delay(randomDelay())
                         ) {
                             isAnimating = true
                         }
@@ -47,12 +55,16 @@ struct MotionAnimationView: View {
             }
         }
         .frame(width: 256, height: 256)
+        .mask(Circle())
+        .drawingGroup()
     }
 }
 
 #Preview {
-    ZStack {
-        Color.teal.ignoresSafeArea()
-        MotionAnimationView()
-    }
+    MotionAnimationView()
+        .background {
+            Circle()
+                .fill(.teal)
+                
+        }
 }
