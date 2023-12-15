@@ -62,18 +62,33 @@ struct SettingsView: View {
                 .frame(maxWidth: .infinity)
             } // : HEADER
             .listRowSeparator(.hidden)
-            Section {
-            } header: {
-                Text("ABOUT THE APP")
-            } footer: {
-                HStack {
+            
+            // MARK: - SECTION: ABOUT
+
+            Section(
+                header: Text("About the App"),
+                footer: HStack {
                     Spacer()
                     Text("Copyright © All right reserved.")
                     Spacer()
-            }
-                .padding(.vertical, 8)
+                }
+                    .padding(.vertical, 8)
+            ) {
+              
+                CustomListRowView(rowLabel: "Application", rowIcon: "apps.iphone", rowContent: "HIKE", rowTintColor: .blue)
                 
-                Text("List Row")
+                CustomListRowView(rowLabel: "Compatibility", rowIcon: "info.circle", rowContent: "iOS, iPadOS", rowTintColor: .red)
+                
+                CustomListRowView(rowLabel: "Technology", rowIcon: "swift", rowContent: "Swift", rowTintColor: .orange)
+                
+                CustomListRowView(rowLabel: "Version", rowIcon: "gear", rowContent: "1.0", rowTintColor: .purple)
+                
+                CustomListRowView(rowLabel: "Developer", rowIcon: "ellipsis.curlybraces", rowContent: "Yurii K", rowTintColor: .mint)
+                
+                CustomListRowView(rowLabel: "Founder", rowIcon: "paintpalette", rowContent: "Yurii K", rowTintColor: .pink)
+                
+//                CustomListRowView(rowLabel: "Website", rowIcon: "globe", rowTintColor: .indigo, rowLinkLabel: "Credo Acedemy", rowLinkDestination: "https://credo.academy")
+                
             } //: Section
         } // : List
     }
