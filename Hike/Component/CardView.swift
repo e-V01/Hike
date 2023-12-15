@@ -64,6 +64,7 @@ struct CardView: View {
                     Image("image-\(imageNumber)")
                         .resizable()
                         .scaledToFit()
+                        .animation(.default, value: imageNumber)
                 }
                 // MARK: - Footer
                 Button {
