@@ -49,6 +49,10 @@ struct CardView: View {
                         }
                         .sheet(isPresented: $isSHowingSheet) {
                             SettingsView()
+                                .presentationDragIndicator(.visible)
+                                .presentationDetents([
+                                    .medium,
+                                    .large])
                         }
                     }
                     
