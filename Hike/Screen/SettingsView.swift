@@ -62,6 +62,19 @@ struct SettingsView: View {
                 .frame(maxWidth: .infinity)
             } // : HEADER
             .listRowSeparator(.hidden)
+            Section {
+            } header: {
+                Text("ABOUT THE APP")
+            } footer: {
+                HStack {
+                    Spacer()
+                    Text("Copyright © All right reserved.")
+                    Spacer()
+            }
+                .padding(.vertical, 8)
+                
+                Text("List Row")
+            } //: Section
         } // : List
     }
 }
