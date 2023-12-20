@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    // MARK: - Properties
+    
+    private let alternateAppIcons: [String] = [
+    "AppIcon-Backpack",
+    "AppIcon-Camera",
+    "AppIcon-Campfire",
+    "AppIcon-Mushroom",
+    "AppIcon-Map",
+    "AppIcon-MagnifyingGlass"
+    ]
+
     var body: some View {
         List {
             // MARK: - Section Header
@@ -62,6 +73,36 @@ struct SettingsView: View {
                 .frame(maxWidth: .infinity)
             } // : HEADER
             .listRowSeparator(.hidden)
+            
+            // MARK: - SECTION: ICONS
+            Section(header: Text("Alternate Icons")) {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 12) {
+                        ForEach(alternateAppIcons.indices, id: \.self) { item in
+                            Button {
+                                print("Pressed icon \(alternateAppIcons[item])")
+                            } label: {
+                                Image("\(alternateAppIcons[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                            }
+                        .buttonStyle(.borderless)
+                        }
+                    }
+                } // : ScrollView
+                .padding(.top, 12)
+                    Text("Choose your favourite app icon from the collection above.")
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .multilineTextAlignment(.center)
+                        .foregroundStyle(.secondary)
+                        .font(.footnote)
+                        .padding(.bottom, 12)
+                } //: SECTION
+            
+            .listRowSeparator(.hidden)
+
             
             // MARK: - SECTION: ABOUT
 
